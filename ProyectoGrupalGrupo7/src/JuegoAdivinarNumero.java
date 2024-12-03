@@ -18,7 +18,7 @@ public class JuegoAdivinarNumero {
 
     public static void main(String[] args) {
 
-        int aleatorio = (int) (Math.random() * 100) + 1;
+int aleatorio = (int) (Math.random() * 100) + 1;
         int numero, contador = 10, num1, num2, contador2 = 2, contador3 = 3, contador4 = 5, num3, num4, contador5 = 7, contador6 = 9;
         boolean pista2;
         Scanner an = new Scanner(System.in);
@@ -46,47 +46,61 @@ public class JuegoAdivinarNumero {
             pista2 = an.nextBoolean();
 
             if (pista2) {
-
-                if (aleatorio % contador2 == 0) {
-                    System.out.println("Es multiplo de " + contador2);
-                }
-                if (aleatorio % contador3 == 0) {
-                    System.out.println("Es multiplo de " + contador3);
-                }
-                if (aleatorio % contador4 == 0) {
-                    System.out.println("Es multiplo de " + contador4);
-                }
-
-                if (aleatorio % contador5 == 0) {
-                    System.out.println("Es multiplo de " + contador5);
-                }
-                if (aleatorio % contador6 == 0) {
-                    System.out.println("Es multiplo de " + contador6);
-                }
                 if (aleatorio > numero) {
                     System.out.println("Es un poco mas");
                 }
                 if (aleatorio < numero) {
                     System.out.println("Es un poco menos");
+                }
+                if ((pista2) && (contador == 9) || (contador <= 7)) {
+                    if (aleatorio % contador2 == 0) {
+                        System.out.println("Es multiplo de " + contador2);
+                    }
+                    if (aleatorio % contador3 == 0) {
+                        System.out.println("Es multiplo de " + contador3);
+                    }
 
+                    if (aleatorio % contador4 == 0) {
+                        System.out.println("Es multiplo de " + contador4);
+                    }
+
+                    if (aleatorio % contador5 == 0) {
+                        System.out.println("Es multiplo de " + contador5);
+                    }
+
+                    if (aleatorio % contador6 == 0) {
+                        System.out.println("Es multiplo de " + contador6);
+                    }
+
+                    if (aleatorio % contador4 == 0) {
+                        System.out.println("Es multiplo de " + contador4);
+                    }
+
+                    if (aleatorio % contador5 == 0) {
+                        System.out.println("Es multiplo de " + contador5);
+                    }
+                }
+                if ((pista2) && (contador == 8) || (pista2) && (contador <= 7)) {
+                    if (aleatorio % 2 == 0) {
+                        System.out.println("El numero es par");
+                    }
+                    if ((aleatorio / 3 == 1) || (aleatorio == 1)) {
+                        System.out.println("El numero es impar");
+                    }
+                }
+                if ((pista2) && (contador <= 7)) {
+                    if ((aleatorio % num3 == aleatorio) && (aleatorio % num4 == aleatorio)) {
+                        System.out.println("El numero es primo");
+                    } else {
+                        System.out.println("El numero no es primo ");
+                    }
+                    if ((aleatorio == num1) || (aleatorio == num2)) {
+                        System.out.println("Pertenece a conjunto fibonacci");
+                    } else {
+                        System.out.println("No pertenecea conjunto fibonacci");
+                    }
                 }
 
-                if (aleatorio % 2 == 0) {
-                    System.out.println("El numero es par");
-                }
-                if ((aleatorio / 3 == 1) || (aleatorio == 1)) {
-                    System.out.println("El numero es impar");
-                }
-                if ((aleatorio % num3 == aleatorio) || (aleatorio % num4 == aleatorio)) {
-                    System.out.println("El numero es primo");
-                } else {
-                    System.out.println("El numero no es primo ");
-                }
-                if ((aleatorio == num1) || (aleatorio == num2)) {
-                    System.out.println("Pertenece a conjunto fibonacci");
-                } else {
-                    System.out.println("No pertenecea conjunto fibonacci");
-                }
             }
         }
     }
